@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="491" webLink="http://" view-date="2019-03-17" view-index="0" gantt-divider-location="444" resource-divider-location="319" version="2.8.9" locale="en_US">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="491" webLink="http://" view-date="2019-01-06" view-index="0" gantt-divider-location="444" resource-divider-location="319" version="2.8.9" locale="en_US">
     <description><![CDATA[Practice Run ]]></description>
     <view zooming-state="default:5" id="gantt-chart">
         <field id="tpd3" name="Name" width="152" order="0"/>
@@ -82,11 +82,14 @@
         <task id="103" name="Design Component 1" color="#66ccff" meeting="false" start="2019-01-05" duration="5" complete="0" thirdDate="2019-01-23" thirdDate-constraint="0" expand="true">
             <depend id="104" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="104" name="Implement Component 1" color="#66ccff" meeting="false" start="2019-01-10" duration="4" complete="0" thirdDate="2019-01-22" thirdDate-constraint="0" expand="true">
+        <task id="104" name="Implement Component 1" color="#66ccff" meeting="false" start="2019-01-10" duration="5" complete="0" thirdDate="2019-01-22" thirdDate-constraint="0" expand="true">
             <depend id="108" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="108" name="Test Component 1" color="#66ccff" meeting="false" start="2019-01-14" duration="5" complete="0" thirdDate="2019-01-23" thirdDate-constraint="0" expand="true"/>
-        <task id="110" name="Component 2" color="#ff99ff" meeting="false" start="2019-03-26" duration="15" complete="0" thirdDate="2018-10-22" thirdDate-constraint="0" expand="true"/>
+        <task id="108" name="Test Component 1" color="#66ccff" meeting="false" start="2019-01-15" duration="5" complete="0" thirdDate="2019-01-23" thirdDate-constraint="0" expand="true"/>
+        <task id="110" name="Component 2" color="#ff99ff" meeting="false" start="2019-03-26" duration="15" complete="0" thirdDate="2018-10-22" thirdDate-constraint="0" expand="true">
+            <depend id="246" type="2" difference="0" hardness="Strong"/>
+            <depend id="265" type="2" difference="0" hardness="Strong"/>
+        </task>
         <task id="115" name="Design Component 2" color="#66ccff" meeting="false" start="2019-03-26" duration="5" complete="0" thirdDate="2019-02-01" thirdDate-constraint="0" expand="true">
             <depend id="116" type="2" difference="0" hardness="Strong"/>
         </task>
@@ -96,8 +99,6 @@
         <task id="121" name="Test Component 2" color="#66ccff" meeting="false" start="2019-04-05" duration="5" complete="0" thirdDate="2019-02-14" thirdDate-constraint="0" expand="true"/>
         <task id="123" name="Component 3" color="#ff3333" meeting="false" start="2019-01-20" duration="65" complete="0" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true">
             <depend id="110" type="2" difference="0" hardness="Strong"/>
-            <depend id="246" type="2" difference="0" hardness="Strong"/>
-            <depend id="265" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="127" name="Design Component 3" color="#66ccff" meeting="false" start="2019-01-20" duration="15" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true">
             <depend id="132" type="2" difference="0" hardness="Strong"/>
@@ -106,22 +107,22 @@
             <depend id="138" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="138" name="Test Component 3" color="#66ccff" meeting="false" start="2019-03-11" duration="15" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
-        <task id="246" name="Component 4" color="#ffff33" meeting="false" start="2019-03-26" duration="30" complete="0" thirdDate="2019-03-31" thirdDate-constraint="0" expand="true"/>
-        <task id="255" name="Component 4 Design" color="#66ccff" meeting="false" start="2019-03-26" duration="5" complete="0" thirdDate="2019-03-17" thirdDate-constraint="0" expand="true">
+        <task id="246" name="Component 4" color="#ffff33" meeting="false" start="2019-04-10" duration="30" complete="0" thirdDate="2019-03-31" thirdDate-constraint="0" expand="true"/>
+        <task id="255" name="Component 4 Design" color="#66ccff" meeting="false" start="2019-04-10" duration="5" complete="0" thirdDate="2019-03-17" thirdDate-constraint="0" expand="true">
             <depend id="256" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="256" name="Component 4 Implementation" color="#66ccff" meeting="false" start="2019-03-31" duration="20" complete="0" thirdDate="2019-03-17" thirdDate-constraint="0" expand="true">
+        <task id="256" name="Component 4 Implementation" color="#66ccff" meeting="false" start="2019-04-15" duration="20" complete="0" thirdDate="2019-03-17" thirdDate-constraint="0" expand="true">
             <depend id="257" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="257" name="Component 4 Test" color="#66ccff" meeting="false" start="2019-04-20" duration="5" complete="0" thirdDate="2019-03-17" thirdDate-constraint="0" expand="true"/>
-        <task id="265" name="Component 5" color="#ff6600" meeting="false" start="2019-03-26" duration="30" complete="0" thirdDate="2019-03-10" thirdDate-constraint="0" expand="true"/>
-        <task id="266" name="Component 5 Design" color="#66ccff" meeting="false" start="2019-03-26" duration="5" complete="0" thirdDate="2019-03-10" thirdDate-constraint="0" expand="true">
+        <task id="257" name="Component 4 Test" color="#66ccff" meeting="false" start="2019-05-05" duration="5" complete="0" thirdDate="2019-03-17" thirdDate-constraint="0" expand="true"/>
+        <task id="265" name="Component 5" color="#ff6600" meeting="false" start="2019-04-10" duration="30" complete="0" thirdDate="2019-03-10" thirdDate-constraint="0" expand="true"/>
+        <task id="266" name="Component 5 Design" color="#66ccff" meeting="false" start="2019-04-10" duration="5" complete="0" thirdDate="2019-03-10" thirdDate-constraint="0" expand="true">
             <depend id="267" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="267" name="Component 5 Implementation" color="#66ccff" meeting="false" start="2019-03-31" duration="20" complete="0" thirdDate="2019-03-10" thirdDate-constraint="0" expand="true">
+        <task id="267" name="Component 5 Implementation" color="#66ccff" meeting="false" start="2019-04-15" duration="20" complete="0" thirdDate="2019-03-10" thirdDate-constraint="0" expand="true">
             <depend id="268" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="268" name="Component 5 Test" color="#66ccff" meeting="false" start="2019-04-20" duration="5" complete="0" thirdDate="2019-03-10" thirdDate-constraint="0" expand="true"/>
+        <task id="268" name="Component 5 Test" color="#66ccff" meeting="false" start="2019-05-05" duration="5" complete="0" thirdDate="2019-03-10" thirdDate-constraint="0" expand="true"/>
     </tasks>
     <resources>
         <custom-property-definition id="tpc0" name="ResponsiblePercent" type="double" default-value="50.0"/>
