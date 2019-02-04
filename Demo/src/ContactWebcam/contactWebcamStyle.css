@@ -1,0 +1,119 @@
+body{
+	background-color: #262C38 !important;
+}
+
+.wrapper{
+	max-width: 1200px;
+	width: 1000px;
+	border-radius: 20px;
+	margin: auto;
+	background: rgba(0,0,0,0.8);
+	box-sizing: border-box;
+	padding: 40px;
+	padding-top: 10px;
+	color: white;
+	margin-top: 100px;
+	height: auto;
+	max-height: auto;
+}
+
+#videoWebcam {
+    width: 500px;
+    height: 500px;
+    background-color: #666;
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#chatBox{
+	width: 400px;
+	float:right;
+	box-sizing: border-box;
+	margin: auto;
+	max-width: 400px;
+}
+
+/* Chat containers */
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    color: black;
+
+}
+
+/* Darker chat container */
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+/* Clear floats */
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Style images */
+.container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+    float: left;
+    color: #999;
+}
+
+.chatBox{
+	border-radius: 25px;
+	max-width: 100%;
+	width: 100%;
+	margin: auto 0;
+	margin-bottom: 20px;
+	padding: 20px;
+
+}
+
+.btn{
+	width: 150px;
+	height: 50px;
+	box-sizing: border-box;
+	padding: 10px 0;
+	margin-top: 15px;
+	outline: none;
+	border: none;
+	background: #60adde;
+	opacity: 0.7;
+	border-radius: 20px;
+	font-size:20px;
+	color: #fff;
+}
+
+.btn:hover{
+	background: #003366;
+}

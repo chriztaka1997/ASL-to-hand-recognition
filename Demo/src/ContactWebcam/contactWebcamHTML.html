@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="contactWebcamStyle.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="contactWebcamScript.js"></script>
+
+	</head>
+	<body>
+		<div class="wrapper">
+			<video id='videoWebcam' autoplay></video>
+			<div id="chatBox">
+				<div class="container">
+				  <img src="../icon/img_avatar.png" alt="Avatar">
+				  <p>Hello. How are you today?</p>
+				  <span class="time-right">11:00</span>
+				</div>
+
+				<div class="container darker">
+				  <img src="../icon/img_avatar.png" alt="Avatar" class="right">
+				  <p>Hey! I'm fine. Thanks for asking!</p>
+				  <span class="time-left">11:01</span>
+				</div>
+
+				<div class="container">
+				  <img src="../icon/img_avatar.png" alt="Avatar">
+				  <p>Sweet! So, what do you wanna do today?</p>
+				  <span class="time-right">11:02</span>
+				</div>
+
+				<div class="container darker">
+				  <img src="../icon/img_avatar.png" alt="Avatar" class="right">
+				  <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+				  <span class="time-left">11:05</span>
+				</div>
+				<input class="chatBox" type="text" placeholder="Enter the message..">
+			</div>
+			<button type="end" class="btn btn-default" onclick="location.href='../ContactList/contactListHTML.html'">End Call</button>
+			<button type="end" class="btn btn-default">Voice</button>
+		</div>
+	</body>
+</html>
