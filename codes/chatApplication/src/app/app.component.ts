@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-
+import {WebcamImage} from 'ngx-webcam';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,28 +7,11 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class AppComponent {
   title = 'ARTT';
-  @ViewChild('videoWebcam') videoWebcam: any;
-  video: any;
-
-  ngOnInit(){
-    this.video = this.videoWebcam.nativeElement;
+  public handleImage(WebcamImage: WebcamImage){
+    
   }
-
-  initCamera(config:any){
-    var browser = <any>navigator;
-    browser.getUserMedia = (browser.getUserMedia || browser.webkitGetUserMedia || browser.mozGetUserMedia || browser.msGetUserMedia);
-
-    browser.mediaDevices.getUserMedia(config).then(stream => {
-      this.video.src = window.URL.createObjectURL(stream);
-      this.video.play();
-    }).catch(function(err){
-      console.log("Error: ", err);
-    });
-  }
+  
 
 };
-export class CameraComponent{
-  @ViewChild('videoWebcam') videoWebcam:any;
 
-}
 

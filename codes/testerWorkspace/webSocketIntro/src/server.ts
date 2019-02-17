@@ -10,10 +10,7 @@ const server = http.createServer(app);
 // Initialize the wbesocket server instance
 const wss = new WebSocket.Server({server});
 
-wss.on('connection', (ws: ExtWebSocket) =>{
-    ws.isAlive = true;
-    
-
+wss.on('connection', (ws: WebSocket) =>{
     // establish a connection 
     // Add simple event to test 
     ws.on('message', (message: string) =>{
