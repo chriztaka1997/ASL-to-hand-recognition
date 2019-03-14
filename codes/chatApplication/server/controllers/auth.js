@@ -68,7 +68,7 @@ module.exports = {
           const token = jwt.sign({ data: user }, dbconfig.secret, {
             expiresIn: 120
           });
-
+          res.cookie('auth', token);
           res.status(HttpStatus.CREATED).json({ message: 'User created sucessfully', user, token });
         })
         .catch(err => {
