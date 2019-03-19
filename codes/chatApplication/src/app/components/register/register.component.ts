@@ -27,8 +27,7 @@ export class RegisterComponent implements OnInit {
   }
 
   registerUser() {
-    console.log(this.registerForm.value);
-    this.authService.registerUser('testing').subscribe(
+    this.authService.registerUser(this.registerForm.value).subscribe(
       data => {
         console.log(data);
         console.log('this is where it pass data');
