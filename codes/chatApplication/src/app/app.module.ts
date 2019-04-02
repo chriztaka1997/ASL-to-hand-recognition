@@ -6,10 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './modules/auth.module';
 import { AuthRoutingModule } from './modules/auth-routing.module';
+import { StreamsModule} from './modules/streams.module';
+import { StreamsRoutingModule} from './modules/streams-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, WebcamModule, AuthModule, AuthRoutingModule],
+  imports: [BrowserModule, WebcamModule, AuthModule, AuthRoutingModule, StreamsModule, StreamsRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })

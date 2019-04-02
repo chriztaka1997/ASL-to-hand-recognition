@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -9,8 +10,10 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
+  errorMessage: string;
+  showSpinner = false;
 
-  constructor(private authService: AuthService, private formBuilder: FormBuilder) {}
+  constructor(private authService: AuthService, private formBuilder: FormBuilder, private router: Router) {}
 
   ngOnInit() {
     this.init();
@@ -27,14 +30,24 @@ export class RegisterComponent implements OnInit {
   }
 
   registerUser() {
+    this.showSpinner = true;
     this.authService.registerUser(this.registerForm.value).subscribe(
       data => {
         console.log(data);
-        console.log('this is where it pass data');
+        this.registerForm.reset();
+        setTimeout(() => {
+          this.router.navigate(['streams']);
+        }, 2000);
       },
       err => {
-        console.log(err);
-        console.log('some shit happen');
+        this.showSpinner = false;
+        if (err.error.msg) {
+          this.errorMessage = err.error.msg[0].message;
+        }
+
+        if (err.error.message) {
+          this.errorMessage = err.error.message;
+        }
       }
     );
   }
