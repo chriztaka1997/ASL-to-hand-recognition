@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { Routes, RouterModule } from '@angular/router';
 import { StreamsComponent } from '../components/streams/streams.component';
+import { AuthGuard } from '../services/auth.guard';
 
 const routes: Routes = [
   {
     path: 'streams',
-    component: StreamsComponent
+    component: StreamsComponent,
+    canActivate: [AuthGuard]
   }
 ];
 
@@ -15,4 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class StreamsRoutingModule { }
+export class StreamsRoutingModule {}
