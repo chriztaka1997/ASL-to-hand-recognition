@@ -9,12 +9,14 @@ const app = express();
 app.use(cors());
 
 const dbconfig = require('./config/secret');
+const server = require('http').createServer(app);
+const io = require('socket.io').listen(server);
 
-app.use((req, res, next)  => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Credentials", "true");
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Methods', 'GET', 'POST', 'DELETE', 'PUT');
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
 });
 
@@ -26,10 +28,12 @@ app.use(cookieParser());
 mongoose.Promise = global.Promise;
 mongoose.connect(dbconfig.url, { useNewUrlParser: true });
 
+require('./socket/streams')(io);
 const auth = require('./routes/authRoutes');
-
+const users = require('./routes/userRoutes');
 app.use('/api/artt', auth);
+app.use('/api/artt', users);
 
-app.listen(3000, () => {
+server.listen(3000, () => {
   console.log('Running on port 3000');
 });

@@ -6,26 +6,20 @@
   </div>
 </div>
 <ul class="collection with-header">
-  <li class="collection-item">
-    <div>
-      Streams
-      <a href="#!" class="secondary-content"><i class="material-icons">send</i></a>
-    </div>
+  <li class="collection-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <a [routerLink]="['/people']">
+      <div>
+        People
+        <a href="#!" class="secondary-content"><i class="material-icons">people</i></a>
+      </div>
+    </a>
   </li>
-  <li class="collection-item">
-    <div>
-      Contacts
-      <a href="#!" class="secondary-content"><i class="material-icons">people</i></a>
-    </div>
-  </li>
-  <li class="collection-item">
-    <div>
-      <a href="#!" class="secondary-content"><i class="material-icons">send</i></a>
-    </div>
-  </li>
-  <li class="collection-item">
-    <div>
-      Alvin<a href="#!" class="secondary-content"><i class="material-icons">send</i></a>
-    </div>
+  <li class="collection-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <a [routerLink]="['/settings']">
+      <div>
+        Settings
+        <a href="#!" class="secondary-content"><i class="material-icons">settings</i></a>
+      </div>
+    </a>
   </li>
 </ul>
