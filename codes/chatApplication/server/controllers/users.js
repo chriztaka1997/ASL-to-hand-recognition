@@ -3,7 +3,6 @@ const User = require('../models/userModels');
 module.exports = {
   async GetAllUsers(req, res) {
     await User.find({})
-      .populate('posts.postId')
       .then(result => {
         res.status(httpStatus.OK).json({ message: 'All users', result });
       })

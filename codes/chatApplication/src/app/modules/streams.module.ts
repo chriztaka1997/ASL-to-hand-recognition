@@ -7,11 +7,11 @@ import { SideComponent } from '../components/side/side.component';
 import { PeopleComponent } from '../components/people/people.component';
 import { StreamsRoutingModule } from './streams-routing.module';
 import { SettingsComponent } from '../components/settings/settings.component';
-
+import { UsersService } from '../services/users.service';
 @NgModule({
   declarations: [StreamsComponent, ToolbarComponent, SideComponent, PeopleComponent, SettingsComponent],
   imports: [CommonModule, StreamsRoutingModule],
   exports: [StreamsComponent],
-  providers: [TokenService]
+  providers: [TokenService, UsersService]
 })
 export class StreamsModule {}
