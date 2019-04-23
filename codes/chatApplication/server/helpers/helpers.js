@@ -1,9 +1,9 @@
 module.exports = {
   firstUppercase: username => {
-    const name = username.toLowwerCase();
-    return name.chatAt(0).toUppserCase() + name.slice(1);
+    const name = username.toLowerCase();
+    return name.charAt(0).toUpperCase() + name.slice(1);
   },
   lowerCase: str => {
-    return str.toLowwerCase();
+    return str.toLowerCase();
   }
 };

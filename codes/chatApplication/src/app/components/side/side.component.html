@@ -1,0 +1,33 @@
+<div class="row contactTitle">
+  <div class="col s12 m4">
+    <a>
+      Contacts
+    </a>
+  </div>
+</div>
+<ul class="collection with-header">
+  <li class="collection-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <a [routerLink]="['/people']">
+      <div>
+        People
+        <a href="#!" class="secondary-content"><i class="material-icons">people</i></a>
+      </div>
+    </a>
+  </li>
+  <li class="collection-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <a [routerLink]="['/users', 'following']">
+      <div>
+        Following
+        <a href="#!" class="secondary-content"><i class="material-icons">recent_actors</i></a>
+      </div>
+    </a>
+  </li>
+  <li class="collection-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <a [routerLink]="['/settings']">
+      <div>
+        Settings
+        <a href="#!" class="secondary-content"><i class="material-icons">settings</i></a>
+      </div>
+    </a>
+  </li>
+</ul>
