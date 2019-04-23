@@ -14,7 +14,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     const token = this.tokenService.GetToken();
     if (token) {
-      this.router.navigate(['streams']);
+      // this is where to change default router
+      this.router.navigate(['people']);
     } else {
       this.router.navigate(['']);
     }

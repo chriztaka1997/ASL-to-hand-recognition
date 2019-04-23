@@ -12,7 +12,9 @@ const userSchema = mongoose.Schema({
       postId: { type: mongoose.Schema.Types.ObjectId, ref: 'Post' },
       post: { type: String }
     }
-  ]
+  ],
+  following: [{ userFollowed: { type: mongoose.Schema.Types.ObjectId, ref: 'User' } }],
+  followers: [{ userFollower: { type: mongoose.Schema.Types.ObjectId, ref: 'User' } }]
 });
 
 module.exports = mongoose.model('User', userSchema);

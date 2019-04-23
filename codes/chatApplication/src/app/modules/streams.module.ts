@@ -8,8 +8,9 @@ import { PeopleComponent } from '../components/people/people.component';
 import { StreamsRoutingModule } from './streams-routing.module';
 import { SettingsComponent } from '../components/settings/settings.component';
 import { UsersService } from '../services/users.service';
+import { FollowingComponent } from '../components/following/following.component';
 @NgModule({
-  declarations: [StreamsComponent, ToolbarComponent, SideComponent, PeopleComponent, SettingsComponent],
+  declarations: [StreamsComponent, ToolbarComponent, SideComponent, PeopleComponent, SettingsComponent, FollowingComponent],
   imports: [CommonModule, StreamsRoutingModule],
   exports: [StreamsComponent],
   providers: [TokenService, UsersService]

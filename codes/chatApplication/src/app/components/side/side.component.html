@@ -15,6 +15,14 @@
     </a>
   </li>
   <li class="collection-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <a [routerLink]="['/users', 'following']">
+      <div>
+        Following
+        <a href="#!" class="secondary-content"><i class="material-icons">recent_actors</i></a>
+      </div>
+    </a>
+  </li>
+  <li class="collection-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
     <a [routerLink]="['/settings']">
       <div>
         Settings
