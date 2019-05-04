@@ -32,9 +32,11 @@ require('./socket/streams')(io);
 const auth = require('./routes/authRoutes');
 const users = require('./routes/userRoutes');
 const friends = require('./routes/friendsRoutes');
+const message = require('./routes/messageRoutes');
 app.use('/api/artt', auth);
 app.use('/api/artt', users);
 app.use('/api/artt', friends);
+app.use('/api/artt', message);
 
 server.listen(3000, () => {
   console.log('Running on port 3000');

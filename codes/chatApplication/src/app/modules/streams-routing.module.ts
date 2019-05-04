@@ -7,6 +7,8 @@ import { AuthGuard } from '../services/auth.guard';
 import { PeopleComponent } from '../components/people/people.component';
 import { SettingsComponent } from '../components/settings/settings.component';
 import { FollowingComponent } from '../components/following/following.component';
+import { FollowersComponent } from '../components/followers/followers.component';
+import { CharComponent } from '../components/char/char.component';
 const routes: Routes = [
   {
     path: 'streams',
@@ -24,8 +26,18 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'users/followers',
+    component: FollowersComponent,
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'settings',
     component: SettingsComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'chat/:name',
+    component: CharComponent,
     canActivate: [AuthGuard]
   }
 ];
