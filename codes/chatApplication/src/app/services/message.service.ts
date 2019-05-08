@@ -8,14 +8,17 @@ const baseURL = 'http://localhost:3000/api/artt';
   providedIn: 'root'
 })
 export class MessageService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  SendMessage(senderId, receiverId, receiverName, message): Observable<any>{
+  SendMessage(senderId, receiverId, receiverName, message): Observable<any> {
     return this.http.post(`${baseURL}/chat-messages/${senderId}/${receiverId}`, {
       receiverId,
       receiverName,
       message
     });
+  }
+
+  GetAllMessages(senderId, receiverId): Observable<any> {
+    return this.http.get(`${baseURL}/chat-messages/${senderId}/${receiverId}`);
   }
 }

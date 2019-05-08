@@ -11,8 +11,8 @@ const userSchema = mongoose.Schema({
   followers: [{ userFollower: { type: mongoose.Schema.Types.ObjectId, ref: 'User' } }],
   chatList: [
     {
-      userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-      msgId: {type: mongoose.Schema.Types.ObjectId, ref: 'Message'}
+      receiverId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+      msgId: { type: mongoose.Schema.Types.ObjectId, ref: 'Message' }
     }
   ]
 });

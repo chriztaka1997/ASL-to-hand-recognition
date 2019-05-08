@@ -12,10 +12,22 @@ import { FollowingComponent } from '../components/following/following.component'
 import { FollowersComponent } from '../components/followers/followers.component';
 import { CharComponent } from '../components/char/char.component';
 import { MessageComponent } from '../components/message/message.component';
-import {MessageService} from '../services/message.service';
+import { MessageService } from '../services/message.service';
+import { FormsModule } from '@angular/forms';
+import { NgxAutoScrollModule } from 'ngx-auto-scroll';
 @NgModule({
-  declarations: [StreamsComponent, ToolbarComponent, SideComponent, PeopleComponent, SettingsComponent, FollowingComponent, FollowersComponent, CharComponent, MessageComponent],
-  imports: [CommonModule, StreamsRoutingModule],
+  declarations: [
+    StreamsComponent,
+    ToolbarComponent,
+    SideComponent,
+    PeopleComponent,
+    SettingsComponent,
+    FollowingComponent,
+    FollowersComponent,
+    CharComponent,
+    MessageComponent
+  ],
+  imports: [CommonModule, StreamsRoutingModule, FormsModule, NgxAutoScrollModule],
   exports: [StreamsComponent],
   providers: [TokenService, UsersService, MessageService]
 })
