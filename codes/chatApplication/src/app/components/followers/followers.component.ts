@@ -4,12 +4,12 @@ import { UsersService } from 'src/app/services/users.service';
 import io from 'socket.io-client';
 
 @Component({
-  selector: 'app-following',
-  templateUrl: './following.component.html',
-  styleUrls: ['./following.component.scss']
+  selector: 'app-followers',
+  templateUrl: './followers.component.html',
+  styleUrls: ['./followers.component.scss']
 })
-export class FollowingComponent implements OnInit {
-  following = [];
+export class FollowersComponent implements OnInit {
+  followers = [];
   user: any;
   socket: any;
 
@@ -18,7 +18,6 @@ export class FollowingComponent implements OnInit {
   }
 
   ngOnInit() {
-    // This is always important step to get the current logged user information
     this.user = this.tokenService.GetPayload();
     this.GetUser();
     this.socket.on('refreshPage', () => {
@@ -29,18 +28,10 @@ export class FollowingComponent implements OnInit {
   GetUser() {
     this.userService.GetUserByID(this.user._id).subscribe(
       data => {
-        this.following = data.result.following;
-        console.log(this.following);
-      },
-      err => console.log(err)
-    );
-  }
-
-  UnfollowUser(user) {
-    this.userService.UnfollowUser(user._id).subscribe(
-      data => {
-        console.log(data);
-        this.socket.emit('refresh', {});
+        console.log(this.user);
+        this.followers = data.result.followers;
+        console.log(this.followers);
+        console.log(this.followers[0].userFollower);
       },
       err => console.log(err)
     );

@@ -26,6 +26,8 @@ module.exports = {
   },
 
   async GetUserByName(req, res) {
+    console.log('randommmm');
+    console.log(req.params);
     await User.findOne({ username: req.params.username })
       .populate('following.userFollowed')
       .populate('followers.userFollower')
